@@ -1,5 +1,8 @@
 import { Inter } from 'next/font/google';
 import 'react-tabs/style/react-tabs.css';
+import MobileFooter from './components/MobileFooter';
+import Nav from './components/Nav';
+import SideNav from './components/SideNav';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -12,7 +15,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Nav />
+        <div className='flex'>
+          <SideNav />
+          {children}
+        </div>
+        <MobileFooter />
+      </body>
     </html>
   )
 }

@@ -1,7 +1,7 @@
 const Nav = () => {
   return (
     <>
-     <div className="justify-between items-start bg-white self-stretch flex w-full gap-5 pl-7 pr-4 py-2.5 max-md:max-w-full max-md:flex-wrap max-md:justify-center max-md:pl-5">
+     <div className="justify-between items-start bg-white self-stretch flex w-full gap-5 pl-7 pr-4 py-2.5 max-md:max-w-full max-md:flex-wrap max-md:justify-center max-md:pl-5 pt-9 md:pt-4">
         <img
           loading="lazy"
           src="/food-network 1.svg"

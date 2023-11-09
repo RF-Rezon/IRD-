@@ -1,11 +1,14 @@
+"use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-const MobileFooter = () => {
+const SideNav = () => {
+  const router = useRouter();
   return (
     <>
-      <div className="fixed bottom-0 left-0 w-full">
-        <div className="bg-white h-[70px]  flex items-center justify-center rounded-tr-lg rounded-tl-lg mt-5 md:hidden">
-          <div className=" py-8 flex w-full px-6 items-center space-x-5 justify-between">
+      <div className="md:flex flex-col items-stretch w-[4%] max-md:w-full max-md:ml-0 hidden fixed left-0 top-16">
+        <div className="justify-center items-center bg-white md:flex max-h-screen flex-col mx-auto py-64 px-4 rounded-xl max-md:py-24 hidden">
+          <div className="items-center self-stretch flex mb-0 flex-col space-y-14 max-md:mb-2.5">
             <Link href={"/"}>
               <div className="bg-gray-500 rounded-lg bg-opacity-10">
                 <img className="w-full h-full" src="/icons_emp.svg" />
@@ -39,4 +42,4 @@ const MobileFooter = () => {
   );
 };
 
-export default MobileFooter;
+export default SideNav;
